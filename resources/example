@@ -1,0 +1,23 @@
+<dtml-var standard_html_header>
+
+<dtml-call expr="RESPONSE.setHeader('content-type', 'text/plain')">
+
+<dtml-if expr="num > 5">
+    num is greater than five
+<dtml-elif expr="num < 5">
+    num is less than five
+<dtml-else>
+    num must be five
+</dtml-if>
+
+<dtml-in expr="objectValues('File')">
+    <a href="&dtml-absolute_url;">
+        <dtml-var title_or_id>
+    </a>
+</dtml-in>
+
+<dtml-comment>
+    this is a block comment
+</dtml-comment>
+
+<dtml-var standard_html_footer>

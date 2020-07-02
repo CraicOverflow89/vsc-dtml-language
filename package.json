@@ -1,0 +1,47 @@
+{
+    "name": "dtml-language",
+    "displayName": "DTML Language",
+    "description": "DTML language support for VS Code",
+    "version": "1.0.0",
+    "author": "CraicOverflow89",
+    "publisher": "CraicOverflow89",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/CraicOverflow89/vsc-dtml-language.git"
+    },
+    "bugs": {
+        "url": "https://github.com/CraicOverflow89/vsc-dtml-language/issues"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "keywords": [
+        "dtml"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "dtml",
+                "aliases": [
+                    "DTML",
+                    "dtml"
+                ],
+                "extensions": [
+                    ".dtml"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "dtml",
+                "scopeName": "source.dtml",
+                "path": "./syntaxes/dtml.tmLanguage.json"
+            }
+        ]
+    }
+}

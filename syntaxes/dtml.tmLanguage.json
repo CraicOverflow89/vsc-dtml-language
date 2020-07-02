@@ -1,0 +1,53 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "dtml",
+	"patterns": [
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.dtml",
+					"match": "\\b(false|true)\\b"
+				},
+				{
+					"name": "constant.numeric.dtml",
+					"match": "\\b-?[0-9]+(?:\\.[0-9]+)?\\b"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.dtml",
+					"match": "\\bdtml-(if|elif|else)\\b"
+				},
+				{
+					"name": "keyword.other.xs",
+					"match": "\\bdtml-(call|comment|in|var)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.dtml",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.dtml",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.dtml"
+}
